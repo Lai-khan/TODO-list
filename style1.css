@@ -6,43 +6,44 @@ body {
   color: white;
   font-family: calibri;
   background: url(iceland.jpg);
-  height: 450px;
+  height: 104px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #h-1 {
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 0 20px;
   position: relative;
 }
 #h-1 h1 {
+  margin: 0;
+  padding: 25px 0;
   font-size: 44px;
+  float: left;
 }
 #h-1 h1 a {
   text-decoration: none;
   color: white;
 }
-#h-1 p {
-  font-weight: bold;
-  font-size: 60px;
+#notice {
+  margin-left: 20px;
+  float: right;
+  position: relative;
+  right: 20px;
+  top: 30px;
 }
-#h-1 center a {
+#center a {
   text-decoration: none;
   color: white;
   background: #00b07b;
   font-size: 30px;
   padding: 4px 20px;
   border-radius: 30px;
-  margin: 10px;
+  margin: 30px;
+  float: right;
 }
-#h-1 center a:hover {
+#center a:hover {
   background: #00c684;
   box-shadow: 0 0 8px 1px gray;
-}
-#notice {
-  float: right;
-  position: relative;
-  right: 20px;
-  top: 30px;
 }
