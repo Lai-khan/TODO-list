@@ -60,7 +60,7 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 16px 8px 16px 40px;
+  padding: 12px 8px 12px 40px;
   background: #eee;
   font-size: 20px;
   transition: 0.2s;

@@ -20,6 +20,7 @@
         <input type="text" name="title" placeholder="Title">
       </div>
       <ul id="TODO">
+        <!-- <li><input type="text" placeholder="Write down what to do."></li> 실제로는 이거 하나만-->
         <li><input type="text" placeholder="Exercise"></li>
         <li><input type="text" placeholder="Go to Shopping"></li>
         <li><input type="text" placeholder="Borrow books"></li>
@@ -27,7 +28,11 @@
         <li><input type="text" placeholder="ABCDEFG"></li>
       </ul>
       <div class="add">
-        <button class="btn1" id="add_btn">+ Add</button>
+        <button onclick="newElement()" class="btn1" id="add_btn">+ Add</button>
+      </div>
+      <div class="deadline">
+        <input type="checkbox" name="deadline">
+        <input type="date" name="dueDate">
       </div>
       <div class="footer">
         <input type="submit" value="완료">

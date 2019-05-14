@@ -13,3 +13,11 @@ $(".close").click(function() {
 $("li").click(function() {
    $(this).toggleClass("checked");
 });
+
+// TODO 항목 우선순위 조절
+$( function() {
+    $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( "ul, li" ).disableSelection();
+  } );
