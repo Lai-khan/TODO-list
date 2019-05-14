@@ -20,9 +20,27 @@
     <article>
       <div id="control">
         <a href="write.html">작성</a>
+        <a href="#">수정</a>
+        <form action="index.html" method="post">
+          <input type="hidden" name="id" value="">
+          <input type="submit" value="delete">
+        </form>
       </div>
-      <h1>TODO list를 만들어보세요</h1>
-      <p>TODO list 만드는 법...</p>
+      <div id="todo_content">
+        <h2>Shopping</h2>
+        <div id="todo_list">
+          <ul>
+            <li>쪽파</li>
+            <li>국거리용 고기</li>
+            <li>바나나</li>
+            <li>식초 1L</li>
+            <li>쌀</li>
+            <li>양파</li>
+            <li>마늘</li>
+            <li>발사믹 식초</li>
+          </ul>
+        </div>
+      </div>
     </article>
   </body>
 </html>

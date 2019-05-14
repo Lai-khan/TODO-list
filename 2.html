@@ -20,9 +20,23 @@
     <article>
       <div id="control">
         <a href="write.html">작성</a>
+        <a href="#">수정</a>
+        <form action="index.html" method="post">
+          <input type="hidden" name="id" value="">
+          <input type="submit" value="delete">
+        </form>
       </div>
-      <h1>TODO list를 만들어보세요</h1>
-      <p>TODO list 만드는 법...</p>
+      <div id="todo_content">
+        <h2>Request</h2>
+        <div id="todo_list">
+          <ul>
+            <li>청소기 밀기</li>
+            <li>함수 이름 영어로 바꿔서 넘기기</li>
+            <li>심부름</li>
+            <li>올때 과자</li>
+          </ul>
+        </div>
+      </div>
     </article>
   </body>
 </html>
