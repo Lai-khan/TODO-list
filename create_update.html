@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="style_cu.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="h-1">
+        <h1><a href="index.html">TODO LIST</a></h1>
+        <div id="center"><a href="create_update.html">Create New</a></div>
+      </div>
+    </div>
+    <div id="article">
+      <div class="header">
+        <h1>TODO List</h1>
+        <h3>Title</h3>
+        <input id="title" type="text">
+      </div>
+      <div class="addlist">
+        <h3>Add list</h3>
+        <input type="text" id="addlist">
+        <button class="addbtn">Add</button>
+        <p class="help">입력하고 Add를 누르면 추가됩니다.</p>
+      </div>
+      <h3>TODO list</h3>
+      <ul class="todo-list">
+        <li>
+          <label>Study</label>
+          <input type="text">
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li>
+        <li class="checked">
+          <label>Book</label>
+          <input type="text">
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li>
+      </ul>
+      <label class="container">선택 시 마감기한을 설정할 수 있습니다.
+        <input type="checkbox">
+        <div class="checkmark"></div>
+      </label>
+      <input type="date" name="dueDate">
+      <div class="footer">
+        <input type="submit" value="완료">
+      </div>
+    </div>
+    <script type="text/javascript" src="script_cu.js"></script>
+  </body>
+</html>
