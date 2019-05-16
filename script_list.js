@@ -1,10 +1,7 @@
 // 항목 li 옆에 내용 삭제 버튼 붙이기
 $("li").each( function() {
-  var img = "<img src=\"update.png\" alt=\"update\">"
-  $(this).append(img);
-  $("img").addClass("update");
-  $(this).append("<span>×</span>");
-  $("span").addClass("close");
+  $(this).append("<span class=\"update\">Edit<span>");
+  $(this).append("<span class=\"close\">×</span>");
 });
 
 // 삭제 버튼 누르면 해당 항목 삭제
@@ -17,10 +14,15 @@ $("li").click(function() {
    $(this).toggleClass("checked");
 });
 
+// 수정 버튼 누르면 li 태그 input 태그로 바꾸기
+$(".update").click(function() {
+
+});
+
 // TODO 항목 우선순위 조절
-$( function() {
-    $( "#sortable" ).sortable({
-      revert: true
-    });
-    $( "ul, li" ).disableSelection();
-  } );
+// $( function() {
+//     $( "#sortable" ).sortable({
+//       revert: true
+//     });
+//     $( "ul, li" ).disableSelection();
+// });
