@@ -109,6 +109,17 @@ ul li.checked::before {
   background-color: #f44336;
   color: white;
 }
+.update {
+  position: absolute;
+  right: 46px;
+  top: 1px;
+  padding: 17.5px 16px 17.5px 16px;
+}
+.update:hover {
+  content: url(update_white.png);
+  background-color: #007bff;
+  color: white;
+}
 .control {
   text-align: right;
   margin-bottom: 42px;
@@ -125,19 +136,10 @@ ul li.checked::before {
   font-size: 15px;
   cursor: pointer;
 }
-.control a.update {
-  border: 1px solid #007bff;
-  border-radius: 10px;
-  background-color: #007bff;
-}
 .control a.delete {
   border: 1px solid #dc3545;
   border-radius: 10px;
   background-color: #dc3545;
-}
-.control a.update:hover {
-  border: 1px solid #0063cc;
-  background-color: #0063cc;
 }
 .control a.delete:hover {
   border: 1px solid #ad1f2d;

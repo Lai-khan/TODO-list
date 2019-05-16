@@ -1,5 +1,8 @@
 // 항목 li 옆에 내용 삭제 버튼 붙이기
 $("li").each( function() {
+  var img = "<img src=\"update.png\" alt=\"update\">"
+  $(this).append(img);
+  $("img").addClass("update");
   $(this).append("<span>×</span>");
   $("span").addClass("close");
 });
