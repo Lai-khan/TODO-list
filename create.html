@@ -5,7 +5,6 @@
     <title>TODO List</title>
     <link rel="stylesheet" href="style_create.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="script_create.js"></script>
   </head>
   <body>
     <div id="header">
@@ -17,26 +16,27 @@
     </div>
     <div id="article">
       <div class="header">
-        <input type="text" name="title" placeholder="Title">
+        <h1>TODO list 입력</h1>
+        <input type="text" class="title" placeholder="제목을 입력하세요.">
+        <hr>
       </div>
-      <ul id="TODO">
-        <!-- <li><input type="text" placeholder="Write down what to do."></li> 실제로는 이거 하나만-->
-        <li><input type="text" placeholder="Exercise"></li>
-        <li><input type="text" placeholder="Go to Shopping"></li>
-        <li><input type="text" placeholder="Borrow books"></li>
-        <li><input type="text" placeholder="Do Homework"></li>
-        <li><input type="text" placeholder="ABCDEFG"></li>
+      <div class="addlist">
+        <input type="text" id="inputvalue" placeholder="할 일을 입력하세요.">
+        <div class="addbtn">Add</div>
+        <p class="help">입력하고 Add를 누르면 추가됩니다.</p>
+      </div>
+      <ul class="todo-list">
+        <!-- <li></li> -->
       </ul>
-      <div class="add">
-        <button onclick="newElement()" class="btn1" id="add_btn">+ Add</button>
-      </div>
-      <div class="deadline">
-        <input type="checkbox" name="deadline">
-        <input type="date" name="dueDate">
-      </div>
+      <label class="container">선택 시 마감기한을 설정할 수 있습니다.
+        <input type="checkbox">
+        <div class="checkmark"></div>
+      </label>
+      <input type="date" name="dueDate">
       <div class="footer">
         <input type="submit" value="완료">
       </div>
     </div>
+    <script type="text/javascript" src="script_create.js"></script>
   </body>
 </html>
