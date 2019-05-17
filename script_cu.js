@@ -1,7 +1,7 @@
 // 항목 추가 버튼
 $(".addbtn").click(function() {
-  var value = document.getElementById("addlist").value;
-  if(value == '') {
+  var value = $('#addlist').val();
+  if(value === '') {
     alert("Write Something!");
   }
   else {
@@ -14,7 +14,11 @@ $(".addbtn").click(function() {
 
 // 해당 항목에 대한 완료 처리
 $("li").click(function() {
-   $(this).toggleClass("checked");
+  if($(this).hasClass("checked")) {
+     $(this).removeClass("checked");
+  } else {
+     $(this).addClass("checked");
+  }
 });
 
 // 삭제 버튼 누르면 해당 항목 삭제
@@ -23,21 +27,34 @@ $(".delete").click(function() {
 });
 
 // 수정 버튼 누르면 해당 항목 수정 가능
-$(".edit").click(function() {
+$(".edit").click(function(e) {
+  e.stopPropagation();
+  var label = $(this).parent("li").children("label");
+  var input = $(this).parent("li").children("input");
   if($(this).parent("li").hasClass("editMode")) {
-    $(this).parent("li").children("label").text() = $(this).parent("li").children("input").val();
+    // $(this).parent("li").children("label").text() = $(this).parent("li").children("input").val();
+    label.innerText = input.value;
+    $(this).parent().removeClass("editMode");
   } else {
-    $(this).parent("li").children("input").val() = $(this).parent("li").children("label").text();
+    // $(this).parent("li").children("input").val() = $(this).parent("li").children("label").text();
+    input.value = label.innerText;
+    $(this).parent().addClass("editMode");
   }
-  $(this).parent().toggleClass("editMode");
 });
 
 // 체크박스를 체크하면 마감기한이 나타난다.
 $(".container").click(function() {
-  if ($('input:checkbox').is(":checked") == true) {
+  if ($('input:checkbox').is(":checked")) {
     $('input[type="date"]').css("visibility", "visible");
   }
   else {
     $('input[type="date"]').css("visibility", "hidden");
   }
 });
+
+// $('li').on('click', function (e) {
+//   if (e.target) {
+//     console.log(e);
+//     console.log("edit btn clicked");
+//   }
+// });
