@@ -12,33 +12,31 @@ $(".addbtn").click(function() {
   document.getElementById("addlist").value = "";
 });
 
-// 해당 항목에 대한 완료 처리
-$("li").click(function() {
-  if($(this).hasClass("checked")) {
-     $(this).removeClass("checked");
-  } else {
-     $(this).addClass("checked");
-  }
-});
-
-// 삭제 버튼 누르면 해당 항목 삭제
-$(".delete").click(function() {
-  $(this).parent("li").remove();
-});
-
-// 수정 버튼 누르면 해당 항목 수정 가능
-$(".edit").click(function(e) {
-  e.stopPropagation();
-  var label = $(this).parent("li").children("label");
-  var input = $(this).parent("li").children("input");
-  if($(this).parent("li").hasClass("editMode")) {
-    // $(this).parent("li").children("label").text() = $(this).parent("li").children("input").val();
-    label.innerText = input.value;
-    $(this).parent().removeClass("editMode");
-  } else {
-    // $(this).parent("li").children("input").val() = $(this).parent("li").children("label").text();
-    input.value = label.innerText;
-    $(this).parent().addClass("editMode");
+// 동적 객체와 상관없이 이벤트 처리를 위한 함수
+$('.todo-list').on('click', function(e) {
+  if (e.target) {
+    if($(e.target).is("li")) {
+      // 해당 항목에 대한 완료 처리
+      if($(e.target).hasClass("checked")) {
+         $(e.target).removeClass("checked");
+      } else {
+         $(e.target).addClass("checked");
+      }
+    }
+    else if ($(e.target).hasClass("edit")) {
+      //수정 버튼 누르면 해당 항목 수정 가능
+      if($(e.target).parent("li").hasClass("editMode")) {
+        $(e.target).prev().prev().text($(e.target).prev().val());
+        $(e.target).parent().removeClass("editMode");
+      } else {
+        $(e.target).prev().val($(e.target).prev().prev().text());
+        $(e.target).parent().addClass("editMode");
+      }
+    }
+    else if ($(e.target).hasClass("delete")) {
+      // 삭제 버튼 누르면 해당 항목 삭제
+      e.target.parentNode.remove();
+    }
   }
 });
 
@@ -51,10 +49,3 @@ $(".container").click(function() {
     $('input[type="date"]').css("visibility", "hidden");
   }
 });
-
-// $('li').on('click', function (e) {
-//   if (e.target) {
-//     console.log(e);
-//     console.log("edit btn clicked");
-//   }
-// });
