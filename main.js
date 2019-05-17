@@ -20,142 +20,61 @@ var app = http.createServer(function(request,response){
   <html>
     <head>
       <meta charset="utf-8" name="viewport" content="width=device-width" initial-scale="1.0">
-      <title>TODO List</title>
+      <title>TODO List - ${title}</title>
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     </head>
     <body>
       <div id="header">
         <div id="h-1">
-          <div id="notice">notification</div>
-          <h1><a href="index.html">TODO LIST</a></h1>
+          <h1><a href="/">TODO LIST</a></h1>
           <center>
             <p>Welcome to my TODO List Website</p>
-            <a href="create.html">Create New</a>
+            <a href="create_update.html">Create New</a>
           </center>
         </div>
       </div>
       <div class="container">
+        <a href="/?id=Shopping">
+          <div class="box">
+            <div class="icon">1</div>
+            <div class="content">
+              <h1>Shopping List</h1>
+            </div>
+          </div>
+        </a>
+        <a href="/?id=Study">
         <div class="box">
+          <div class="icon">2</div>
           <div class="content">
-            <h2>Today1</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
+            <h1>Study</h1>
           </div>
         </div>
+        </a>
+        <a href="/?id=Meeting">
         <div class="box">
+          <div class="icon">3</div>
           <div class="content">
-            <h2>Today2</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
+            <h1>Meeting</h1>
           </div>
         </div>
+        </a>
+        <a href="/?id=Task">
         <div class="box">
+          <div class="icon">4</div>
           <div class="content">
-            <h2>Today3</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
+            <h1>Task</h1>
           </div>
         </div>
+        </a>
+        <a href="/?id=Travel Plan">
         <div class="box">
+          <div class="icon">5</div>
           <div class="content">
-            <h2>Today4</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
+            <h1>Travel Plan</h1>
           </div>
         </div>
-        <div class="box">
-          <div class="content">
-            <h2>Today5</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
-        </div>
-        <div class="box">
-          <div class="content">
-            <h2>Today6</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
-        </div>
-        <div class="box">
-          <div class="content">
-            <h2>Today7</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
-        </div>
-        <div class="box">
-          <div class="content">
-            <h2>Today8</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
-        </div>
-        <div class="box">
-          <div class="content">
-            <h2>Today9</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
-        </div>
-        <div class="box">
-          <div class="content">
-            <h2>Today10</h2>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
-        </div>
+        </a>
       </div>
     </body>
   </html>
