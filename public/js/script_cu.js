@@ -6,7 +6,7 @@ $(".addbtn").click(function() {
   }
   else {
     // 입력한 내용 리스트에 추가
-    var txt = "<li><label>"+value+"</label><input  name=\"list\" type=\"text\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></li>";
+    var txt = `<li><input type="hidden" name="checklist" value="0"><label>${value}</label><input name="list" type="text" value="${value}"><button type="button" class="edit">Edit</button><button type="button" class="delete">Delete</button></li>`;
     $("ul").append(txt);
   }
   document.getElementById("addlist").value = "";
@@ -19,8 +19,10 @@ $('.todo-list').on('click', function(e) {
       // 해당 항목에 대한 완료 처리
       if($(e.target).hasClass("checked")) {
          $(e.target).removeClass("checked");
+         $(e.target).children().first().val(0);
       } else {
          $(e.target).addClass("checked");
+         $(e.target).children().first().val(1);
       }
     }
     else if ($(e.target).hasClass("edit")) {
@@ -54,8 +56,8 @@ $(".container").click(function() {
 });
 
 // submit 하기 전에 체크
-$("#done").on('click', function(e) {
-  e.preventDefault();
+$("#done").on('click', function(create) {
+  // e.preventDefault();
   if(title.value === "") {
     // Title 입력 안 했을 때
     alert("제목을 입력하세요.");
@@ -69,10 +71,10 @@ $("#done").on('click', function(e) {
     // li 항목이 있을 때
     var inputVal = $(".todo-list input[type=text]");
     for(var i=0; i<inputVal.length; i++) {
-      if($(inputVal).prev().text() === "") {
+      if($(inputVal[i]).prev().text() === "") {
         alert("항목에 입력된 값이 없습니다.");
         return false;
-      } else if($(inputVal).parent("li").hasClass("editMode")) {
+      } else if($(inputVal[i]).parent("li").hasClass("editMode")) {
         // 항목중에 Editmode가 끝나지 않은 것이 있을 때
         alert("Edit이 완료되지 않았습니다.");
         $(inputVal).focus();

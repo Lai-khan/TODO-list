@@ -5,7 +5,7 @@ body {
 #header {
   color: white;
   font-family: calibri;
-  background: url(iceland.jpg);
+  background: url(/images/iceland.jpg);
   height: 104px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -160,4 +160,20 @@ ul li.checked::before {
 }
 .footer form {
   display: inline-block;
+}
+#save {
+  margin: 0 10px;
+  border: 2px solid #00b07b;
+  background-color: white;
+  color: #00b07b;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  right: 240px;
+  top: 270px;
+}
+#save:hover {
+  background-color: #00b07b;
+  color: white;
 }

@@ -5,7 +5,7 @@ body {
 #header {
   color: white;
   font-family: calibri;
-  background: url(iceland.jpg);
+  background: url(/images/iceland.jpg);
   height: 104px;
   background-repeat: no-repeat;
   background-size: cover;
