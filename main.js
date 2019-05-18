@@ -2,70 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
-
-function templateHTML(title, header, footer, list) {
-  return `
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8" name="viewport" content="width=device-width" initial-scale="1.0">
-      <title>TODO List - ${title}</title>
-      <link rel="stylesheet" href="style.css">
-      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    </head>
-    <body>
-    ${header}
-    ${list}
-    ${footer}
-    </body>
-  </html>
-  `;
-}
-
-function templateList(fileList) {
-  var list = `<div class="container">`;
-  var i=0;
-  while(i < fileList.length) {
-    list = list + `
-    <a href="/?id=${fileList[i]}">
-      <div class="box">
-        <div class="icon">1</div>
-        <div class="content">
-          <h1>${fileList[i]}</h1>
-        </div>
-      </div>
-    </a>
-    `
-    i = i+1;
-  }
-  list = list + '</div>';
-  return list;
-}
-
-function templateView(title, taskList) {
-  var list = `
-  <div id="article">
-    <div class="header">
-      <h1>${title}</h1>
-    </div>
-    <h3>TODO list</h3>
-    <ul class="todo-list">
-  `;
-  var i=0;
-  while(i < taskList.length) {
-    list = list + `
-    <li>
-      <label>${taskList[i]}</label>
-    </li>
-    `
-    i = i+1;
-  }
-  list = list + `
-    </ul>
-  </div>
-  `;
-  return list;
-}
+var template = require('template.js');
 
 var app = http.createServer(function(request,response){
   var _url = request.url;
@@ -88,8 +25,8 @@ var app = http.createServer(function(request,response){
           </div>
         </div>
         `;
-        var list = templateList(fileList);
-        var template = templateHTML(title, header, '', list);
+        var list = template.List(fileList);
+        var template = template.HTML(title, header, '', list);
         response.writeHead(200);
         response.end(template);
       });
@@ -111,7 +48,7 @@ var app = http.createServer(function(request,response){
             <input type="hidden" name="id" value="${list}">
             <input type="submit" value="저장">
           </form>
-          <a href="create_update.html">수정</a>
+          <a href="/update">수정</a>
           <form action="delete_process" method="post">
             <input type="hidden" name="id" value="${title}">
             <input type="submit" value="삭제">
@@ -119,8 +56,8 @@ var app = http.createServer(function(request,response){
         </div>
         `
         var array = list.toString().split(',');
-        var list = templateView(title, array);
-        var template = templateHTML(title, header, footer, list);
+        var list = template.View(title, array);
+        var template = template.HTML(title, header, footer, list);
         response.writeHead(200);
         response.end(template);
       });
@@ -178,7 +115,7 @@ var app = http.createServer(function(request,response){
       </form>
     </div>
     `;
-    var template = templateHTML(title, header, footer, body);
+    var template = template.HTML(title, header, footer, body);
     response.writeHead(200);
     response.end(template);
   } else if (pathname === '/create_process') {
