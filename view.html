@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TODO List</title>
-    <link rel="stylesheet" href="style_view.css">
+    <link rel="stylesheet" href="./public/css/style_view.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -18,34 +18,39 @@
       <div class="header">
         <h1>Shopping List</h1>
       </div>
-      <h3>TODO list</h3>
-      <ul class="todo-list">
-        <li>
-          <label>30x1 Egg</label>
-        </li>
-        <li>
-          <label>onion</label>
-        </li>
-        <li>
-          <label>apple</label>
-        </li>
-        <li>
-          <label>carrot</label>
-        </li>
-        <li>
-          <label>mushroom</label>
-        </li>
-      </ul>
+      <form name="save" method="post">
+        <h3>TODO list</h3>
+        <ul class="todo-list">
+          <li>
+            <input type="hidden" name="checklist" value="0">
+            <label>30x1 Egg</label>
+          </li>
+          <li>
+            <input type="hidden" name="checklist" value="0">
+            <label>onion</label>
+          </li>
+          <li>
+            <input type="hidden" name="checklist" value="0">
+            <label>apple</label>
+          </li>
+          <li>
+            <input type="hidden" name="checklist" value="0">
+            <label>carrot</label>
+          </li>
+          <li>
+            <input type="hidden" name="checklist" value="0">
+            <label>mushroom</label>
+          </li>
+        </ul>
+        <input id="save" type="submit" value="저장" onclick='btn_click("save")'>
+      </form>
     </div>
     <div class="footer">
-      <form action="view.html" method="post">
-        <input type="submit" value="저장">
-      </form>
       <a href="create_update.html">수정</a>
-      <form action="index.html" method="post">
-        <input type="submit" value="삭제">
+      <form name="remove" method="post">
+        <input type="submit" value="삭제" onclick='btn_click("delete")'>
       </form>
     </div>
-    <script type="text/javascript" src="script_view.js"></script>
+    <script type="text/javascript" src="./public/js/script_view.js"></script>
   </body>
 </html>

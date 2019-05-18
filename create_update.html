@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TODO List</title>
-    <link rel="stylesheet" href="style_cu.css">
+    <link rel="stylesheet" href="./public/css/style_cu.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div id="article">
-      <form name="create" action="index.html" method="post">
+      <form name="create" action="#" method="post">
         <div class="header">
           <h1>TODO List</h1>
           <h3>Title</h3>
@@ -24,7 +24,7 @@
         <div class="addlist">
           <h3>Add list</h3>
           <input type="text" id="addlist">
-          <button class="addbtn">Add</button>
+          <button type="button" class="addbtn">Add</button>
           <p class="help">입력하고 Add를 누르면 추가됩니다.</p>
         </div>
         <h3>TODO list</h3>
@@ -32,14 +32,14 @@
           <li>
             <label>Study</label>
             <input name="list" type="text">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
+            <button type="button" class="edit">Edit</button>
+            <button type="button" class="delete">Delete</button>
           </li>
           <li class="checked">
             <label>Book</label>
             <input name="list" type="text">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
+            <button type="button" class="edit">Edit</button>
+            <button type="button" class="delete">Delete</button>
           </li>
         </ul>
         <label class="container">선택 시 마감기한을 설정할 수 있습니다.
@@ -52,6 +52,6 @@
         </div>
       </form>
     </div>
-    <script type="text/javascript" src="script_cu.js"></script>
+    <script type="text/javascript" src="./public/js/script_cu.js"></script>
   </body>
 </html>
