@@ -40,12 +40,6 @@ body {
   background: #00c684;
   box-shadow: 0 0 8px 1px gray;
 }
-/* #notice {
-  float: right;
-  position: relative;
-  right: 20px;
-  top: 30px;
-} */
 .container {
   margin: 80px 200px;
 
@@ -87,9 +81,6 @@ body {
   transition: 1s;
 }
 .container .box:hover .icon {
-  /* background-color: #eee;
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out; */
   box-shadow: 0 0 0 400px #00b07b;
 }
 .content {
