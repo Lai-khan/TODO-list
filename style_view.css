@@ -158,3 +158,6 @@ ul li.checked::before {
   background-color: #00b07b;
   color: white;
 }
+.footer form {
+  display: inline-block;
+}
