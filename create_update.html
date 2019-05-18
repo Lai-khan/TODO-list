@@ -18,7 +18,7 @@
       <div class="header">
         <h1>TODO List</h1>
         <h3>Title</h3>
-        <input id="title" type="text">
+        <input name="title" id="title" type="text">
       </div>
       <div class="addlist">
         <h3>Add list</h3>
@@ -30,25 +30,27 @@
       <ul class="todo-list">
         <li>
           <label>Study</label>
-          <input type="text">
+          <input name="list" type="text">
           <button class="edit">Edit</button>
           <button class="delete">Delete</button>
         </li>
         <li class="checked">
           <label>Book</label>
-          <input type="text">
+          <input name="list" type="text">
           <button class="edit">Edit</button>
           <button class="delete">Delete</button>
         </li>
       </ul>
       <label class="container">선택 시 마감기한을 설정할 수 있습니다.
-        <input type="checkbox">
+        <input name="deadline" type="checkbox">
         <div class="checkmark"></div>
       </label>
-      <input type="date" name="dueDate">
-      <div class="footer">
-        <input type="submit" value="완료">
-      </div>
+      <input type="date" name="dueDate" id="date">
+      <form name="create" action="index.html" method="post">
+        <div class="footer">
+          <input id="done" type="submit" value="완료">
+        </div>
+      </form>
     </div>
     <script type="text/javascript" src="script_cu.js"></script>
   </body>

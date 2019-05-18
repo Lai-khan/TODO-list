@@ -6,7 +6,7 @@ $(".addbtn").click(function() {
   }
   else {
     // 입력한 내용 리스트에 추가
-    var txt = "<li><label>"+value+"</label><input type=\"text\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></li>";
+    var txt = "<li><label>"+value+"</label><input  name=\"list\" type=\"text\" required><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></li>";
     $("ul").append(txt);
   }
   document.getElementById("addlist").value = "";
@@ -37,6 +37,9 @@ $('.todo-list').on('click', function(e) {
       // 삭제 버튼 누르면 해당 항목 삭제
       e.target.parentNode.remove();
     }
+    else if($(e.target).val() === "완료") {
+      alert("완료버튼");
+    }
   }
 });
 
@@ -48,4 +51,41 @@ $(".container").click(function() {
   else {
     $('input[type="date"]').css("visibility", "hidden");
   }
+});
+
+// submit 하기 전에 체크
+$("#done").on('click', function(e) {
+  e.preventDefault();
+  if(title.value === "") {
+    // Title 입력 안 했을 때
+    alert("제목을 입력하세요.");
+    title.focus();
+    return false;
+  } else if(!$("li").length) {
+    // 항목이 하나도 없을 때
+    alert("항목을 입력하세요.");
+    return false;
+  } else if($("li").length) {
+    // li 항목이 있을 때
+    var inputVal = $(".todo-list input[type=text]");
+    for(var i=0; i<inputVal.length; i++) {
+      if($(inputVal).prev().text() === "") {
+        alert("항목에 입력된 값이 없습니다.");
+        return false;
+      } else if($(inputVal).parent("li").hasClass("editMode")) {
+        // 항목중에 Editmode가 끝나지 않은 것이 있을 때
+        alert("Edit이 완료되지 않았습니다.");
+        $(inputVal).focus();
+        return false;
+      }
+    }
+    if($('input:checkbox').is(":checked")) {
+      if(date.value === "") {
+        alert("마감기한을 입력하세요.");
+        date.focus();
+        return false;
+      }
+    }
+  }
+  create.submit();
 });
