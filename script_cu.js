@@ -6,7 +6,7 @@ $(".addbtn").click(function() {
   }
   else {
     // 입력한 내용 리스트에 추가
-    var txt = "<li><label>"+value+"</label><input  name=\"list\" type=\"text\" required><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></li>";
+    var txt = "<li><label>"+value+"</label><input  name=\"list\" type=\"text\"><button class=\"edit\">Edit</button><button class=\"delete\">Delete</button></li>";
     $("ul").append(txt);
   }
   document.getElementById("addlist").value = "";

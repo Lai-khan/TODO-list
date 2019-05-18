@@ -15,38 +15,38 @@
       </div>
     </div>
     <div id="article">
-      <div class="header">
-        <h1>TODO List</h1>
-        <h3>Title</h3>
-        <input name="title" id="title" type="text">
-      </div>
-      <div class="addlist">
-        <h3>Add list</h3>
-        <input type="text" id="addlist">
-        <button class="addbtn">Add</button>
-        <p class="help">입력하고 Add를 누르면 추가됩니다.</p>
-      </div>
-      <h3>TODO list</h3>
-      <ul class="todo-list">
-        <li>
-          <label>Study</label>
-          <input name="list" type="text">
-          <button class="edit">Edit</button>
-          <button class="delete">Delete</button>
-        </li>
-        <li class="checked">
-          <label>Book</label>
-          <input name="list" type="text">
-          <button class="edit">Edit</button>
-          <button class="delete">Delete</button>
-        </li>
-      </ul>
-      <label class="container">선택 시 마감기한을 설정할 수 있습니다.
-        <input name="deadline" type="checkbox">
-        <div class="checkmark"></div>
-      </label>
-      <input type="date" name="dueDate" id="date">
       <form name="create" action="index.html" method="post">
+        <div class="header">
+          <h1>TODO List</h1>
+          <h3>Title</h3>
+          <input name="title" id="title" type="text">
+        </div>
+        <div class="addlist">
+          <h3>Add list</h3>
+          <input type="text" id="addlist">
+          <button class="addbtn">Add</button>
+          <p class="help">입력하고 Add를 누르면 추가됩니다.</p>
+        </div>
+        <h3>TODO list</h3>
+        <ul class="todo-list">
+          <li>
+            <label>Study</label>
+            <input name="list" type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+          <li class="checked">
+            <label>Book</label>
+            <input name="list" type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+        </ul>
+        <label class="container">선택 시 마감기한을 설정할 수 있습니다.
+          <input name="deadline" type="checkbox">
+          <div class="checkmark"></div>
+        </label>
+        <input type="date" name="dueDate" id="date">
         <div class="footer">
           <input id="done" type="submit" value="완료">
         </div>
