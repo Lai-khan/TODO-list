@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+const PORT = process.env.PORT || 3000
 var db = require('./lib/db.js');
 var bodyParser = require('body-parser');
 var template = require('./lib/template.js');
@@ -57,6 +58,6 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Something broke!')
 });
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log('Example app listening on port 3000!')
 });
