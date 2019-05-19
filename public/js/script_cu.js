@@ -49,14 +49,17 @@ $('.todo-list').on('click', function(e) {
 $(".container").click(function() {
   if ($('input:checkbox').is(":checked")) {
     $('input[type="date"]').css("visibility", "visible");
+    $('input:hidden[name="deadline"]').val(1);
   }
   else {
     $('input[type="date"]').css("visibility", "hidden");
+    $('input:hidden[name="deadline"]').val(0);
   }
 });
 
 // submit 하기 전에 체크
-$("#done").on('click', function(create) {
+// $("#done").on('click', function(create) {
+function check() {
   // e.preventDefault();
   if(title.value === "") {
     // Title 입력 안 했을 때
@@ -70,6 +73,7 @@ $("#done").on('click', function(create) {
   } else if($("li").length) {
     // li 항목이 있을 때
     var inputVal = $(".todo-list input[type=text]");
+    console.log(inputVal);
     for(var i=0; i<inputVal.length; i++) {
       if($(inputVal[i]).prev().text() === "") {
         alert("항목에 입력된 값이 없습니다.");
@@ -82,12 +86,16 @@ $("#done").on('click', function(create) {
       }
     }
     if($('input:checkbox').is(":checked")) {
-      if(date.value === "") {
+      if($("#due").val() === "") {
         alert("마감기한을 입력하세요.");
-        date.focus();
+        $("#due").focus();
         return false;
       }
     }
   }
   create.submit();
-});
+}//);
+
+if($(".container").children().first().val() == 1) {
+  $('input[type="date"]').css("visibility", "visible");
+}

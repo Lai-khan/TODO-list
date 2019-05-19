@@ -8,11 +8,3 @@ $("li").click(function() {
      $(this).children().first().val(1);
   }
 });
-
-// function btn_click(str) {
-//   if(str === "save") {
-//     save.action = "/checked_process";
-//   } else if(str === "delete") {
-//     remove.action = "/delete_process";
-//   }
-// }
