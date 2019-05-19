@@ -1,5 +1,5 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
 const PORT = process.env.PORT || 3000
 var db = require('./lib/db.js');
 var bodyParser = require('body-parser');
