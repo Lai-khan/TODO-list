@@ -49,11 +49,16 @@
 아직 해결방법 찾지 못했다   
 
 
-<img src="./result_images/no connection.png" width="80%"></img>
+<img src="./result_images/no connection.png" width="80%"></img>  
+
+#### Frontend만 볼 수 있는 URL   
+https://lai-khan.github.io/TODO-list/  
 
 --------------------------------------------------------
 
 ### 결과 이미지  
+
+Heroku에 Deploy하고 얼마간 잘 돌아갈 때 캡쳐한 이미지.  
 
 <img src="./result_images/mainpage.jpg" width="80%"></img>   
 <img src="./result_images/mainpage2.jpg" width="80%"></img>   
@@ -65,6 +70,8 @@
 
 
 ### 구동 영상   
+
+Heroku에 Deploy하고 얼마간 잘 돌아갈 때 녹화한 영상.  
 
 [![Video Label](http://img.youtube.com/vi/kTUHR43eCi4/0.jpg)](https://youtu.be/kTUHR43eCi4)      
 
