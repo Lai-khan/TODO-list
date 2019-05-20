@@ -37,7 +37,7 @@
 
 ### 사용언어  
 - 프론트엔드 : HTML, CSS, Javascript, jQuery  
-- 백엔드 : Npde.js, Express.js, MySQL  
+- 백엔드 : Node.js, Express.js, MySQL  
 
 ---------------------------------------------------------
 
@@ -45,8 +45,8 @@
 ``` https://laikhan.herokuapp.com/ ```  
 
 테스트 할 때는 잘 됐었으나 시간이 지나고 보니 에러로 잘 들어가지지 않았다.  
-현재 ```Error: Connection lost: The server closed the connection.` 이란 에러로 접속 불가  
-아직 해결방법 찾지 못했다   
+현재 **Error: Connection lost: The server closed the connection.** 이란 에러로 접속 불가  
+아직 해결방법을 찾지 못했다   
 
 
 <img src="./result_images/no connection.png" width="80%"></img>  
@@ -83,7 +83,7 @@ Heroku는 commit 'Heroku3' 일 때 처음으로 웹 호스팅 성공, 하지만 
 
 
 ### 설치 및 빌드 방법   
-
+패키지로 빌드하지 못했다.  
 
 
 ### 사용한 모듈들   
